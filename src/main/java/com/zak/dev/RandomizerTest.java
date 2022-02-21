@@ -15,16 +15,33 @@ public class RandomizerTest {
 		
 		Random rand = new Random();
 		
-		System.out.println("Character 1: " + characters[rand.nextInt(characters.length)]);
-		System.out.println("Character 2: " + characters[rand.nextInt(characters.length)]);
-		System.out.println("Character 3: " + characters[rand.nextInt(characters.length)]);
-		
-		System.out.println("Location: " + locations[rand.nextInt(locations.length)]);
-		
-		System.out.println("Time: " + times[rand.nextInt(times.length)]);
-		
-		System.out.println("Complication: " + complication[rand.nextInt(complication.length)]);
 
+		for(int i=0; i<3; i++) {
+		randomRolePlay(rand.nextInt(5), characters, locations, times, complication, rand, rand.nextBoolean());
+		System.out.println("---------------------------------------------------------------------");
+		System.out.println();
+
+		}
+	}
+	
+	private static void randomRolePlay(int count, String[] chars, String[] locations, String[] times, String[] complication, Random r, boolean comp) {
+		if(count<1) {
+			return;
+		}
+		for(int i=0; i<count; i++) {
+			int num = i+1;
+			System.out.print("Character " + num + ": ");
+			System.out.println(chars[r.nextInt(chars.length)]);
+
+		}
+		
+		System.out.println("Location: " + locations[r.nextInt(locations.length)]);
+		
+		System.out.println("Time: " + times[r.nextInt(times.length)]);
+		if(comp) {
+			System.out.println("Complication: " + complication[r.nextInt(complication.length)]);	
+		}
+	
 	}
 
 }
