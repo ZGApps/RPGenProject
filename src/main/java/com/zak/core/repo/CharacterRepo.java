@@ -3,6 +3,8 @@ package com.zak.core.repo;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import com.zak.core.model.CharacterData;
+
 @Repository("character")
 public interface CharacterRepo extends JpaRepository<CharacterData, Integer> {
 
