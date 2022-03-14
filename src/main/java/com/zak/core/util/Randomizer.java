@@ -1,7 +1,10 @@
-package com.zak.util;
+package com.zak.core.util;
 
 import java.util.Random;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Randomizer {
 	private static Random r = new Random();
 	
