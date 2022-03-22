@@ -5,7 +5,7 @@ import org.springframework.stereotype.Repository;
 
 import com.zak.core.model.CharacterData;
 
-@Repository("character")
+@Repository("characters")
 public interface CharacterRepo extends JpaRepository<CharacterData, Integer> {
 
 	<S extends CharacterData> S save(S entity);
